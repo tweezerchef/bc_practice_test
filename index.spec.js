@@ -8,7 +8,9 @@ const should = window.should = chai.should();
 const spy = sinon.spy(console, 'log');
 /* globals test */
 
-describe('The Unoffical Bootcamp Exam of Planet Earth', function () {
+describe('The Unoffical Bootcamp Exam for Planet Earth', function () {
+    let greetingCall;
+    let contestantsCall;
     let numberOfContestants = 14;
     let numberOfDogs = 10;
     let numberOfVotes = 1390;
@@ -34,18 +36,16 @@ describe('The Unoffical Bootcamp Exam of Planet Earth', function () {
         greenVotes: 201,
         greenWeight: 101,
     }]
-     beforeEach(function(){
-            let copyOfFilteredDogs = null;
-        })
-    
-    
-    describe('greeting', function () {
-        beforeEach(function(){
-            var greetingCall = null;
-            var greeting = null;
-        })
-            let greetingCall = greeting("Hello everyone, welcome!", "We are on planet KaleLin", "the show will start soon.")
 
+    let copyOfFilteredDogs;
+
+    beforeEach(function () {
+        if (typeof greetingCall === "function") greetingCall = greeting("Hello everyone, welcome!", "We are on planet KaleLin", "the show will start soon.")
+        if (typeof contestants === "function") contestantsCall = contestants(dogs);
+        if (Array.isArray(filterSpecies)) copyOfFilteredDogs = [...filterSpecies];
+    });
+
+    describe('greeting', function () {
         it(`should be a function`, function () {
             expect(typeof greeting === "function").to.be.true;
         });
@@ -55,19 +55,13 @@ describe('The Unoffical Bootcamp Exam of Planet Earth', function () {
             expect(spy.calledWith('Hello everyone, welcome! We are on planet KaleLin the show will start soon.')).to.be.true;
         });
     });
-    
-    describe('contestants', function () {
-        beforeEach(function(){
-            contestants = null;
-            contestantsCall = null;
-        })
-        let contestantsCall = contestants(dogs);
 
+    describe('contestants', function () {
         it(`should be a function`, function () {
             expect(typeof contestants === "function").to.be.true;
         });
         it(`should return the length of our array`, function(){
-            expect(contestants(dogs)).to.equal(numberOfContestants);
+            if (typeof contestants === "function") expect(contestants(dogs)).to.equal(numberOfContestants);
         })
     });
 
@@ -114,7 +108,7 @@ describe('The Unoffical Bootcamp Exam of Planet Earth', function () {
     });
 
     describe('firstInClass', function () {
-        firstInClass(topDogs)
+        // firstInClass(topDogs)
         it('should use recursion by calling self', function () {
             let firstInClassHold = firstInClass;
             firstInClass = sinon.spy(firstInClass);
@@ -132,7 +126,7 @@ describe('The Unoffical Bootcamp Exam of Planet Earth', function () {
         })
 
     });
-    
+
     describe('votes', function () {
         it(`should be a number`, function () {
             expect(votes).to.be.a('number');
