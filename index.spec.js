@@ -9,8 +9,6 @@ const spy = sinon.spy(console, 'log');
 /* globals test */
 
 describe('The Unoffical Bootcamp Exam of Planet Earth', function () {
-    let greetingCall = greeting("Hello everyone, welcome!", "We are on planet KaleLin", "the show will start soon.")
-    let contestantsCall = contestants(dogs);
     let numberOfContestants = 14;
     let numberOfDogs = 10;
     let numberOfVotes = 1390;
@@ -36,8 +34,18 @@ describe('The Unoffical Bootcamp Exam of Planet Earth', function () {
         greenVotes: 201,
         greenWeight: 101,
     }]
-    let copyOfFilteredDogs = [...filterSpecies]
+     beforeEach(function(){
+            let copyOfFilteredDogs = null;
+        })
+    
+    
     describe('greeting', function () {
+        beforeEach(function(){
+            var greetingCall = null;
+            var greeting = null;
+        })
+            let greetingCall = greeting("Hello everyone, welcome!", "We are on planet KaleLin", "the show will start soon.")
+
         it(`should be a function`, function () {
             expect(typeof greeting === "function").to.be.true;
         });
@@ -49,6 +57,12 @@ describe('The Unoffical Bootcamp Exam of Planet Earth', function () {
     });
     
     describe('contestants', function () {
+        beforeEach(function(){
+            contestants = null;
+            contestantsCall = null;
+        })
+        let contestantsCall = contestants(dogs);
+
         it(`should be a function`, function () {
             expect(typeof contestants === "function").to.be.true;
         });
@@ -58,6 +72,9 @@ describe('The Unoffical Bootcamp Exam of Planet Earth', function () {
     });
 
     describe('filterSpecies', function () {
+        beforeEach(function(){
+            filterSpecies = null;
+        })
         it(`should be an array'`, function () {
             expect(filterSpecies).to.be.an('array');
         });
@@ -70,6 +87,7 @@ describe('The Unoffical Bootcamp Exam of Planet Earth', function () {
     });
 
     describe('dogContestants', function () {
+        // let copyOfFilteredDogs = [...filterSpecies]
         it(`should have the same length of the "filterSpecies" array`, function () {
             expect(filterSpecies.length).to.equal(dogContestants.length);
         });

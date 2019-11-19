@@ -88,30 +88,42 @@ let dogs = [
 ]
 
 // 1.
-var greeting;
+var greeting = function(){
+    
+};
 
 
 // 2.
-var contestants;
+var contestants = function(){
+    
+};
 
 
 // 3.
-var filterSpecies;
+var filterSpecies = function(){
+    
+};
 
 
 // 4. 
-var dogContestants;
+var dogContestants = function(){
+    
+};
 
 
 
 // 5. 
-var dogsWithClasses;
+var dogsWithClasses = function(){
+    
+};
 
     
 
 
 // 6.
-var firstInClass;
+var firstInClass = function(){
+    
+};
 
 
 
