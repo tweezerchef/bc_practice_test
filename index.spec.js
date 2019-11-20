@@ -66,9 +66,6 @@ describe('The Unoffical Bootcamp Exam for Planet Earth', function () {
     });
 
     describe('filterSpecies', function () {
-        beforeEach(function(){
-            filterSpecies = null;
-        })
         it(`should be an array'`, function () {
             expect(filterSpecies).to.be.an('array');
         });
