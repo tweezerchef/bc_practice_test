@@ -7,6 +7,7 @@ Let's get started!
 
 1. Since this is an intergalatic event, many of our patrons speak different languages!
     Assign a function to our our `greeting` variable that takes 3 inputs: `greeting`, `location` and `time`. Concatanate these values together to form a viable sentence and log it to the console.
+    Don't forget the spaces!
 
 2. We have more contestants than anticipated. (We actually don't have a count!)
     Assign a function to our `contestants` variable that will return the number of entries in our dogs array. 

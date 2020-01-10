@@ -40,12 +40,15 @@ describe('The Unoffical Bootcamp Exam for Planet Earth', function () {
     let copyOfFilteredDogs;
 
     beforeEach(function () {
-        if (typeof greetingCall === "function") greetingCall = greeting("Hello everyone, welcome!", "We are on planet KaleLin", "the show will start soon.")
+       
         if (typeof contestants === "function") contestantsCall = contestants(dogs);
         if (Array.isArray(filterSpecies)) copyOfFilteredDogs = [...filterSpecies];
     });
 
     describe('greeting', function () {
+        beforeEach(function(){
+             if (typeof greeting === "function") greetingCall = greeting("Hello everyone, welcome!", "We are on planet KaleLin", "the show will start soon.");
+        })
         it(`should be a function`, function () {
             expect(typeof greeting === "function").to.be.true;
         });
