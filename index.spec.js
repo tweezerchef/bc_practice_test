@@ -97,13 +97,13 @@ describe('The Unoffical Bootcamp Exam for Planet Earth', function () {
             })
         });
         it(`should have the correct amount of dogs in each class`, function () {
-            expect(dogsWithClasses.filter(dog => dog.class === "green").length).to.equal(3)
+            expect((dogsWithClasses.filter(dog => dog.class === "green")).length).to.equal(3)
         });
         it(`should have the correct amount of dogs in each class`, function () {
-            expect(dogsWithClasses.filter(dog => dog.class === "yellow").length).to.equal(2)
+            expect((dogsWithClasses.filter(dog => dog.class === "yellow")).length).to.equal(2)
         });
         it(`should have the correct amount of dogs in each class`, function () {
-            expect(dogsWithClasses.filter(dog => dog.class === "red").length).to.equal(5)
+            expect((dogsWithClasses.filter(dog => dog.class === "red")).length).to.equal(5)
         });
     });
 

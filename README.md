@@ -22,7 +22,7 @@ Let's get started!
     Using the native map method, add a key of `class` with the value:
         - "red" if the dog's weight is between 0 and 10.
         - "yellow" if the dog's weight is between 11 and 20.
-        - "green" if the dog's weight is over 20.
+        - "green" if the dog's weight is 21 or over.
 
 
 6. The votes are in! We have an array of the top dogs in each class

@@ -91,12 +91,15 @@ let dogs = [
 var greeting;
 
 
+
 // 2.
 var contestants;
 
 
+
 // 3.
 var filterSpecies;
+
 
 
 // 4. 
@@ -111,7 +114,6 @@ var dogsWithClasses;
 
 // 6.
 var firstInClass;
-
 
 
 
