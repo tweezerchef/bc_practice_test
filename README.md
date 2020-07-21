@@ -1,4 +1,4 @@
-# bc_pratice_test
+# bc_practice_test
 Welcome to the 1st Annual Alien Dog Show!
 
 Since this is our first event, we're hiring jr Developers like yourself to make sure things don't go wrong.
