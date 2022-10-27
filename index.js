@@ -113,7 +113,7 @@ var dogContestants = [...filterSpecies];
 //console.log(dogContestants);
 
 // 5. 
-var dogsWithClasses = dogContestants.map(function(dogs, index, array){
+var dogsWithClasses = dogContestants.map(function(dogs){
     // if dogs weigh macthes add a key of class and a value of color
     if(dogs.weight >= 0 && dogs.weight <= 10){
       dogs.class = "red";  
