@@ -88,34 +88,72 @@ let dogs = [
 ]
 
 // 1.
-var greeting;
+var greeting = function(greeting, location, time){
+    console.log(`${greeting} ${location} ${time}`);
+};
 
 
 
 // 2.
-var contestants;
+var contestants = function(){
+    return dogs.length;
+};
 
 
 
 // 3.
-var filterSpecies;
+var filterSpecies = dogs.filter(animals => animals.species === "dog")
+;
 
 
 
 // 4. 
-var dogContestants;
+var dogContestants = [...filterSpecies];
 
-
+//console.log(dogContestants);
 
 // 5. 
-var dogsWithClasses;
+var dogsWithClasses = dogContestants.map(function(dogs, index, array){
+    // if dogs weigh macthes add a key of class and a value of color
+    if(dogs.weight >= 0 && dogs.weight <= 10){
+      dogs.class = "red";  
+    };
+    if(dogs.weight >= 11 && dogs.weight <= 20){
+        dogs.class = "yellow"
+} ;
+    if(dogs.weight >= 21){
+    dogs.class = "green"}
+    return dogs;
+    
+    })
+   
+    ;
     
 
 
 // 6.
-var firstInClass;
+//use recursion 
+var firstInClass = function(array, newObj = {}){
+console.log(newObj)
+    //base case return obj
+if (array.length === 0){
+    return newObj;
+}
 
+for(let key in array[0]){
+    newObj[key] = array[0][key]
+}
+
+return firstInClass(array.slice(1), newObj)
+};
 
 
 // 7.
-var votes;
+
+var votes = dogs.reduce(function(acc, dog){
+    acc += dog.votes
+    return acc
+
+}, 0)  
+
+

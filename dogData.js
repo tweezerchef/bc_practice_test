@@ -111,7 +111,13 @@ let topDogs = [{
     greenWeight: 101,
 }]
 
-
+/**
+ * return array with all the key/value pairs
+ * 
+ * 
+ * 
+ * 
+ */
 
 
 
